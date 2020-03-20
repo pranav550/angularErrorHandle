@@ -8,22 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angualr1';
-  error: String;
-  data: any = []
-
-  constructor(private apiService: ApiServiceService) {
-
-  }
-
-  dataGet() {
+  userData: any = []
+  constructor(
+    private apiService: ApiServiceService
+  ) {
     this.apiService.getData().subscribe(data => {
       console.log(data)
-      this.data = data
-    }, (error) => {
+      this.userData = data
+    }, error => {
       console.log(error)
-      this.error = error
     })
-
   }
 }

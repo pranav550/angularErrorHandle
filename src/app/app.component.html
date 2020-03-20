@@ -8,12 +8,9 @@
 </head>
 
 <body>
-  <h1>Angular Handling Example</h1>
-  <button (click)="dataGet()">click</button>
-  <ul *ngFor="let dat of data">
-    <li>{{dat.login}}</li>
+  <ul *ngFor="let data of userData">
+    <li>{{data.login}}</li>
   </ul>
-
 </body>
 
 </html>
